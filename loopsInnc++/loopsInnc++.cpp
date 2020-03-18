@@ -9,7 +9,7 @@ int main()
 {
 	int count = 0;
 	int number = 0;
-	int factorial = 0;
+	long long factorial = 0;
 	
 	std::string str;
 	while (number < 20) { // while loop with ints that will stop when reached 20
@@ -31,13 +31,25 @@ int main()
 						std::cout << "maximun number is: " << count << std::endl;
 
 //Factorial calculation using a forloop
-						std::cout << "Enter a number for a factorial calculatioin In your forloop: " << std::endl;
+						std::cout << "Enter a number for a factorial calculation In your forloop: " << std::endl;
 						std::cin >> factorial;
-						int startfact = factorial;
-						for (int i = factorial - 1; i > 1; i--) {
+						long long startfact = factorial;
+						for (long long i = factorial - 1; i > 1; i--) {
 							factorial = factorial * i;
 							std::cout<< "Factorial calculation =  " << factorial << std::endl;
 						}
 						std::cout << "Factorial value of : " << startfact << " is : " << factorial << std::endl;
+								long long factorial2; // long long is a data type like int but allow higher numbers == more bytes
+								std::cout << "Enter a number for a factorial calculation In your forloop: " << std::endl;
+								std::cin >> factorial2;
+								long long startfact2 = factorial2 -1; // starting counting down on the value you type in - 1
+								int showstartFact = factorial2;// just for showing start value in the final print
+								while (startfact2 > 1){ 
+									
+									factorial2 *= startfact2; // *= is the same as factorial = factorial *
+									std::cout << "Factorial calculation =  " << factorial2 << std::endl;
+									startfact2--;
+								}
+								std::cout << "Factorial value of : " << showstartFact << " is : " << factorial2 << std::endl;
 }
 
