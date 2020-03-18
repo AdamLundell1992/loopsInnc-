@@ -9,6 +9,8 @@ int main()
 {
 	int count = 0;
 	int number = 0;
+	int factorial = 0;
+	
 	std::string str;
 	while (number < 20) { // while loop with ints that will stop when reached 20
 		number++;
@@ -16,15 +18,26 @@ int main()
 	
 	}
 	std::cout << "final number stopped at : " << number << std::endl;
-	while (str != "banana") {//while loop breaks/stops when the condition is reached in this case it is banana  
-		std::cout << "Only banana will break the loop try to type something else" << std::endl;
-		std::cin >> str;
-	}
-	std::cout << "You broke the loop by writing the key word : banana " << std::endl;
+	
+			while (str != "banana") {//while loop breaks/stops when the condition is reached in this case it is banana  
+				std::cout << "Only banana will break the loop try to type something else" << std::endl;
+				std::cin >> str;
+			}
+			std::cout << "You broke the loop by writing the key word : banana " << std::endl;
 
-	for (count = 0; count < 20; count++) { // for loop with ints that will stop when it rached 20
-		std::cout << "Number: " << count << std::endl;
-	}
-		std::cout << "maximun number is: " << count << std::endl;
+					for (count = 0; count < 20; count++) { // for loop with ints that will stop when it rached 20
+						std::cout << "Number: " << count << std::endl;
+					}
+						std::cout << "maximun number is: " << count << std::endl;
+
+//Factorial calculation using a forloop
+						std::cout << "Enter a number for a factorial calculatioin In your forloop: " << std::endl;
+						std::cin >> factorial;
+						int startfact = factorial;
+						for (int i = factorial - 1; i > 1; i--) {
+							factorial = factorial * i;
+							std::cout<< "Factorial calculation =  " << factorial << std::endl;
+						}
+						std::cout << "Factorial value of : " << startfact << " is : " << factorial << std::endl;
 }
 
