@@ -39,17 +39,41 @@ int main()
 							std::cout<< "Factorial calculation =  " << factorial << std::endl;
 						}
 						std::cout << "Factorial value of : " << startfact << " is : " << factorial << std::endl;
-								long long factorial2; // long long is a data type like int but allow higher numbers == more bytes
-								std::cout << "Enter a number for a factorial calculation In your forloop: " << std::endl;
-								std::cin >> factorial2;
-								long long startfact2 = factorial2 -1; // starting counting down on the value you type in - 1
-								int showstartFact = factorial2;// just for showing start value in the final print
-								while (startfact2 > 1){ 
+										long long factorial2; // long long is a data type like int but allow higher numbers == more bytes
+										std::cout << "Enter a number for a factorial calculation In your forloop: " << std::endl;
+										std::cin >> factorial2;
+										long long startfact2 = factorial2 -1; // starting counting down on the value you type in - 1
+										int showstartFact = factorial2;// just for showing start value in the final print
+										while (startfact2 > 1){ 
 									
-									factorial2 *= startfact2; // *= is the same as factorial = factorial *
-									std::cout << "Factorial calculation =  " << factorial2 << std::endl;
-									startfact2--;
-								}
-								std::cout << "Factorial value of : " << showstartFact << " is : " << factorial2 << std::endl;
+											factorial2 *= startfact2; // *= is the same as factorial = factorial *
+											std::cout << "Factorial calculation =  " << factorial2 << std::endl;
+											startfact2--;
+										}
+											std::cout << "Factorial value of : " << showstartFact << " is : " << factorial2 << std::endl;
+													//Do while loops
+													int pincode = 5454;
+													int guessPincode;
+													do {
+														std::cout << "enter a valid pincode" << std::endl;
+														std::cin >> guessPincode;
+														if (guessPincode != pincode) {
+															std::cout << "wrong pin code try again! " << std::endl;
+														}
+													} while (guessPincode != pincode);
+
+													std::cout << "pin code is correct good guess! " << std::endl;
+																
+																std::string password = "adam";
+																std::string guessPassword;
+																do{
+																std::cout << "enter a valid password" << std::endl;
+																std::cin >> guessPassword;
+																if (guessPassword != password) {
+																	std::cout << "wrong password try again! " << std::endl;
+																}
+															} while (guessPassword != password);
+
+															std::cout << "password is correct good guess! " << std::endl;
 }
 
